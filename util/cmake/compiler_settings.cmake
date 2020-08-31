@@ -10,7 +10,7 @@ target_compile_features(compiler_settings INTERFACE cxx_std_20)
 
 check_cxx_compiler_flag(-Weverything HAS_COMPILER_WARNING_EVERYTHING)
 if (${HAS_COMPILER_WARNING_EVERYTHING})
-  target_compile_options(compiler_settings INTERFACE -Weverything -Wno-c++98-compat -Wno-padded)
+  target_compile_options(compiler_settings INTERFACE -Weverything -Wno-c++98-compat -Wno-c++98-compat-pedantic -Wno-padded)
 else()
   check_cxx_compiler_flag(-Wall HAS_COMPILER_WARNING_ALL)
   if (${HAS_COMPILER_WARNING_ALL})
