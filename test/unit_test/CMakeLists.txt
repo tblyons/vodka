@@ -14,7 +14,7 @@ FetchContent_MakeAvailable(doctest)
 add_executable(unit_test)
 target_link_libraries(unit_test
   PRIVATE
-    compile_settings
+    compiler_settings
     doctest::doctest)
 target_sources(unit_test
   PRIVATE

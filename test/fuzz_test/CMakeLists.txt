@@ -9,7 +9,7 @@ add_executable(fuzz_test main.cpp)
 target_compile_options(fuzz_test
   PRIVATE -fsanitize=fuzzer,undefined,address)
 target_link_libraries(fuzz_test
-  PRIVATE compile_settings -coverage -fsanitize=fuzzer,undefined,address)
+  PRIVATE compiler_settings -coverage -fsanitize=fuzzer,undefined,address)
 
 add_test(NAME build_fuzz_test_t
   COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target fuzz_test)
