@@ -1,7 +1,5 @@
-//******************************************************************************
 // Copyright (c) 2020, Timothy Lyons
 // License: ISC (https://opensource.org/licenses/ISC)
-//******************************************************************************
 #include "prob.hpp"
 
 namespace vodka::math::stats {
