@@ -4,6 +4,7 @@
 ################################################################################
 
 add_library(vodka)
+target_include_directories(vodka PUBLIC .)
 target_link_libraries(vodka PRIVATE compiler_settings)
 target_sources(vodka
   PRIVATE

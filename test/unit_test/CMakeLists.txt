@@ -15,10 +15,12 @@ add_executable(unit_test)
 target_link_libraries(unit_test
   PRIVATE
     compiler_settings
-    doctest::doctest)
+    doctest::doctest
+    vodka)
 target_sources(unit_test
   PRIVATE
-    main.cpp)
+    main.cpp
+    vodka/math/stats/dist.cpp)
 
 add_test(NAME build_unit_test_t
   COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target unit_test)
