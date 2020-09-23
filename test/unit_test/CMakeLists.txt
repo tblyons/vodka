@@ -20,7 +20,7 @@ target_link_libraries(unit_test
 target_sources(unit_test
   PRIVATE
     main.cpp
-    vodka/math/stats/dist.cpp)
+)
 
 add_test(NAME build_unit_test_t
   COMMAND ${CMAKE_COMMAND} --build ${CMAKE_BINARY_DIR} --target unit_test)

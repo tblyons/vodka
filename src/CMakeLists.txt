@@ -18,7 +18,6 @@ target_sources(vodka
     vodka/coord/lla.cpp
     vodka/coord/ned.cpp
     vodka/coord/rae.cpp
-    vodka/math/stats/dist.cpp
     vodka/math/stats/prob.cpp
   PUBLIC
     vodka/coord/ecef.hpp
@@ -27,6 +26,4 @@ target_sources(vodka
     vodka/coord/lla.hpp
     vodka/coord/ned.hpp
     vodka/coord/rae.hpp
-    vodka/math/decimal.hpp
-    vodka/math/stats/dist.hpp
     vodka/math/stats/prob.hpp)
