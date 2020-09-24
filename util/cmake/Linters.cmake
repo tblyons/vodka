@@ -1,6 +1,5 @@
 ################################################################################
-# Copyright (c) 2020, Timothy Lyons
-# License: ISC (https://opensource.org/licenses/ISC)
+# License: The Unlicense (https://unlicense.org)
 ################################################################################
 
 # TODO: Does it make sense not to enable linters on release builds?

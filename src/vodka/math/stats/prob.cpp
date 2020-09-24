@@ -1,5 +1,4 @@
-// Copyright (c) 2020, Timothy Lyons
-// License: ISC (https://opensource.org/licenses/ISC)
+// License: The Unlicense (https://unlicense.org)
 #include "prob.hpp"
 
 namespace vodka::math::stats {
