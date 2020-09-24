@@ -34,10 +34,12 @@ include(util/cmake/compiler_settings.cmake)
 
 FetchContent_Declare(eigen
   GIT_REPOSITORY https://gitlab.com/libeigen/eigen.git
+  GIT_SHALLOW    TRUE
   GIT_TAG        "3.3.7")
 FetchContent_MakeAvailable(eigen)
 FetchContent_Declare(units
   GIT_REPOSITORY https://github.com/nholthaus/units.git
+  GIT_SHALLOW    TRUE
   GIT_TAG        "v2.3.1")
 FetchContent_MakeAvailable(units)
 
