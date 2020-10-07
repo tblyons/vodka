@@ -2,11 +2,12 @@
 #include "ecef.hpp"
 
 #include "lla.hpp"
+#include "vodka/util/move.hpp"
 
 namespace vodka::coord {
 
 ecef_t::ecef_t(Eigen::Vector3d pos)
-  : ecef(std::move(pos)) { }
+  : ecef(tybl::vodka::util::move(pos)) { }
 
 ecef_t::operator Eigen::Vector3d() const {
   return ecef;

@@ -3,7 +3,7 @@
 ################################################################################
 
 add_library(vodka)
-target_include_directories(vodka PUBLIC .)
+target_include_directories(vodka PUBLIC . ../include)
 target_link_libraries(vodka
   PRIVATE
     compiler_settings
