@@ -25,17 +25,13 @@ FetchContent_Declare(doctest
   GIT_TAG        "2.4.0")
 FetchContent_MakeAvailable(doctest)
 
-add_library(vodka)
-target_include_directories(vodka PUBLIC include)
-target_link_libraries(vodka PRIVATE compiler_settings)
+add_library(vodka INTERFACE)
+target_include_directories(vodka INTERFACE include)
 target_sources(vodka
-  PRIVATE
-    src/vodka/math/stats/prob.cpp
-  PUBLIC
+  INTERFACE
     include/vodka/type_traits/remove_reference.hpp
     include/vodka/utility/forward.hpp
-    include/vodka/utility/move.hpp
-    src/vodka/math/stats/prob.hpp)
+    include/vodka/utility/move.hpp)
 
 if(IS_ROOT_PROJECT OR BUILD_PROJECT_TESTS)
   add_subdirectory(test EXCLUDE_FROM_ALL)
