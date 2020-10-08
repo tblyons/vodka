@@ -3,8 +3,10 @@
 #ifndef TYBL_VODKA_ARRAY_ARRAY_HPP
 #define TYBL_VODKA_ARRAY_ARRAY_HPP
 
+#ifndef TYBL_CAN_SYNTHESIZE_COMPARISONS
 // https://gcc.gnu.org/bugzilla/show_bug.cgi?id=93480
 #define TYBL_CAN_SYNTHESIZE_COMPARISONS 0
+#endif // TYBL_CAN_SYNTHESIZE_COMPARISONS
 
 #include <algorithm> // std::swap_ranges
 #include <cassert>   // assert
