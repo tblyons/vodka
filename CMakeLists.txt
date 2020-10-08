@@ -8,22 +8,21 @@ project(template
   DESCRIPTION "Template C++ Project using CMake"
   LANGUAGES CXX)
 
-option(BUILD_PROJECT_TESTS "Build and run tests as a subproject" OFF)
+option(TYBL_BUILD_ALL_TESTS "Build and run tests as a subproject" OFF)
 
-set(IS_ROOT_PROJECT CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
-if(IS_ROOT_PROJECT)
+if(CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME)
   include(CTest)
-endif()
-include(FetchContent)
-include(util/cmake/compiler_settings.cmake)
-#include(util/cmake/Linters.cmake)
+  include(FetchContent)
+  include(util/cmake/compiler_settings.cmake)
+  #include(util/cmake/Linters.cmake)
 
-# Use doctest as unit test framework
-FetchContent_Declare(doctest
-  GIT_REPOSITORY https://github.com/onqtam/doctest.git
-  GIT_SHALLOW    TRUE
-  GIT_TAG        "2.4.0")
-FetchContent_MakeAvailable(doctest)
+  # Use doctest as unit test framework
+  FetchContent_Declare(doctest
+    GIT_REPOSITORY https://github.com/onqtam/doctest.git
+    GIT_SHALLOW    TRUE
+    GIT_TAG        "2.4.0")
+  FetchContent_MakeAvailable(doctest)
+endif()
 
 add_library(vodka INTERFACE)
 target_include_directories(vodka INTERFACE include)
@@ -36,6 +35,6 @@ target_sources(vodka
     include/vodka/utility/forward.hpp
     include/vodka/utility/move.hpp)
 
-if(IS_ROOT_PROJECT OR BUILD_PROJECT_TESTS)
-  add_subdirectory(test EXCLUDE_FROM_ALL)
+if((CMAKE_PROJECT_NAME STREQUAL PROJECT_NAME) OR TYBL_BUILD_ALL_TESTS)
+  add_subdirectory(test)
 endif()
