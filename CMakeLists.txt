@@ -4,7 +4,7 @@
 cmake_minimum_required(VERSION 3.14) # FetchContent_MakeAvailable
 
 project(libvodka
-  VERSION 0.0.7
+  VERSION 0.0.9
   DESCRIPTION "Learning through reimplementing the standard library"
   LANGUAGES CXX)
 
@@ -31,7 +31,9 @@ target_sources(vodka
     include/vodka/array/array.hpp
     include/vodka/array/get.hpp
     include/vodka/array/to_array.hpp
+    include/vodka/type_traits/remove_const.hpp
     include/vodka/type_traits/remove_cv.hpp
+    include/vodka/type_traits/remove_volatile.hpp
     include/vodka/type_traits/remove_reference.hpp
     include/vodka/utility/forward.hpp
     include/vodka/utility/move.hpp)
