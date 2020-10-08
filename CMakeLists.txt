@@ -29,6 +29,9 @@ add_library(vodka INTERFACE)
 target_include_directories(vodka INTERFACE include)
 target_sources(vodka
   INTERFACE
+    include/vodka/array/array.hpp
+    include/vodka/array/get.hpp
+    include/vodka/array/to_array.hpp
     include/vodka/type_traits/remove_reference.hpp
     include/vodka/utility/forward.hpp
     include/vodka/utility/move.hpp)
