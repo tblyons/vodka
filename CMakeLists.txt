@@ -33,8 +33,8 @@ target_sources(vodka
     src/vodka/math/stats/prob.cpp
   PUBLIC
     include/vodka/type_traits/remove_reference.hpp
-    include/vodka/util/forward.hpp
-    include/vodka/util/move.hpp
+    include/vodka/utility/forward.hpp
+    include/vodka/utility/move.hpp
     src/vodka/math/stats/prob.hpp)
 
 if(IS_ROOT_PROJECT OR BUILD_PROJECT_TESTS)
