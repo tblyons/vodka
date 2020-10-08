@@ -3,14 +3,14 @@
 #ifndef TYBL_VODKA_UTIL_MOVE_HPP
 #define TYBL_VODKA_UTIL_MOVE_HPP
 
-#include <type_traits>
+#include "vodka/type_traits/remove_reference.hpp" // remove_reference
 
 namespace tybl::vodka::util {
 
-template<typename T>
+template <typename T>
 constexpr auto
-move(T&& obj) noexcept -> typename std::remove_reference<T>::type&& {
-  return static_cast<typename std::remove_reference<T>::type&&>(obj);
+move(T&& obj) noexcept -> type_traits::remove_reference_t<T>&& {
+  return static_cast<type_traits::remove_reference_t<T>&&>(obj);
 }
 
 } // namespace tybl::vodka::util
