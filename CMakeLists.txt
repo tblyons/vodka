@@ -3,9 +3,9 @@
 ################################################################################
 cmake_minimum_required(VERSION 3.14) # FetchContent_MakeAvailable
 
-project(template
-  VERSION 0.0.0
-  DESCRIPTION "Template C++ Project using CMake"
+project(libvodka
+  VERSION 0.0.6
+  DESCRIPTION "Learning through reimplementing the standard library"
   LANGUAGES CXX)
 
 option(TYBL_BUILD_ALL_TESTS "Build and run tests as a subproject" OFF)
