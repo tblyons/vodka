@@ -19,6 +19,7 @@ target_link_libraries(unit_test
 target_sources(unit_test
   PRIVATE
     main.cpp
+    vodka/utility/forward.cpp
 )
 
 add_test(NAME build_unit_test_t

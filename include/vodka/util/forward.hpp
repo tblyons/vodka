@@ -3,7 +3,9 @@
 #ifndef TYBL_VODKA_UTIL_FORWARD_HPP
 #define TYBL_VODKA_UTIL_FORWARD_HPP
 
-#include <type_traits> // std::remove_reference, std::is_lvalue_reference
+#include "vodka/type_traits/remove_reference.hpp"
+
+#include <type_traits> // std::is_lvalue_reference
 
 namespace tybl::vodka::util {
 
