@@ -5,6 +5,7 @@ AlwaysBreakBeforeMultilineStrings: true
 AlwaysBreakTemplateDeclarations:   Yes
 BreakConstructorInitializers:      BeforeComma
 BreakInheritanceList:              BeforeComma
+ColumnLimit:                       0
 PointerAlignment:                  Left
 SpacesInContainerLiterals:         false
 ...

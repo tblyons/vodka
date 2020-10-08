@@ -7,7 +7,7 @@
 
 #include <type_traits> // std::is_lvalue_reference
 
-namespace tybl::vodka::utilty {
+namespace tybl::vodka::utility {
 
 template <typename T>
 constexpr auto
