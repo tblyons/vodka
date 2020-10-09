@@ -6,4 +6,5 @@
 if(CMAKE_CXX_COMPILER_ID MATCHES ".*Clang")
   add_subdirectory(fuzz_test)
 endif()
+add_subdirectory(comp_test)
 add_subdirectory(unit_test)
