@@ -5,7 +5,7 @@
 
 namespace tybl::vodka {
 
-template <class T, T V>
+template <typename T, T V>
 struct integral_constant {
 
   using value_type = T;

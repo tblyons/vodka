@@ -19,7 +19,7 @@
 
 namespace tybl::vodka {
 
-template <class T, size_t N>
+template <typename T, size_t N>
 struct array {
   static_assert(0 < N);
 
@@ -92,7 +92,7 @@ struct array {
 }; // struct array
 
 #if !TYBL_CAN_SYNTHESIZE_COMPARISONS
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator==(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   auto l = lhs.begin(), e = lhs.end(), r = rhs.begin();
   do { // array cannot be zero sized, so we can safely dereference begin()
@@ -105,12 +105,12 @@ constexpr auto operator==(array<T, N> const& lhs, array<T, N> const& rhs) -> boo
   return true;
 }
 
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator!=(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   return !(lhs == rhs);
 }
 
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator<(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   auto l = lhs.begin(), e = lhs.end(), r = rhs.begin();
   do { // array cannot be zero sized, so we can safely dereference begin()
@@ -123,17 +123,17 @@ constexpr auto operator<(array<T, N> const& lhs, array<T, N> const& rhs) -> bool
   return false;
 }
 
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator>(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   return rhs < lhs;
 }
 
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator<=(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   return !(rhs < lhs);
 }
 
-template <class T, size_t N>
+template <typename T, size_t N>
 constexpr auto operator>=(array<T, N> const& lhs, array<T, N> const& rhs) -> bool {
   return !(lhs < rhs);
 }

@@ -8,15 +8,15 @@
 
 namespace tybl::vodka {
 
-template <class T>
+template <typename T>
 struct is_lvalue_reference
   : false_type {};
 
-template <class T>
+template <typename T>
 struct is_lvalue_reference<T&>
   : true_type {};
 
-template <class T>
+template <typename T>
 inline constexpr bool is_lvalue_reference_v = is_lvalue_reference<T>::value;
 
 } // namespace tybl::vodka
