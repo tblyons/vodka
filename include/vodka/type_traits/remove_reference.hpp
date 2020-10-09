@@ -3,7 +3,7 @@
 #ifndef TYBL_VODKA_TYPETRAITS_REMOVEREFERENCE_HPP
 #define TYBL_VODKA_TYPETRAITS_REMOVEREFERENCE_HPP
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <typename T>
 struct remove_reference {
@@ -23,6 +23,6 @@ struct remove_reference<T&&> {
 template <typename T>
 using remove_reference_t = typename remove_reference<T>::type;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_REMOVEREFERENCE_HPP

@@ -6,7 +6,7 @@
 #include "false_type.hpp"
 #include "true_type.hpp"
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <class T>
 struct is_lvalue_reference
@@ -19,6 +19,6 @@ struct is_lvalue_reference<T&>
 template <class T>
 inline constexpr bool is_lvalue_reference_v = is_lvalue_reference<T>::value;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_ISLVALUEREFERENCE_HPP

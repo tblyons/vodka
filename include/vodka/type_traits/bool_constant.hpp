@@ -5,12 +5,12 @@
 
 #include "integral_constant.hpp"
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <bool _Val>
 using bool_constant = integral_constant<bool, _Val>;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_INTEGRALCONSTANT_HPP
 

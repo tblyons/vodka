@@ -5,10 +5,10 @@
 
 #include "bool_constant.hpp"
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 using true_type = bool_constant<true>;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_TRUETYPE_HPP

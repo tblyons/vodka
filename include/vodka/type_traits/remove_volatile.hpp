@@ -3,7 +3,7 @@
 #ifndef TYBL_VODKA_TYPETRAITS_REMOVEVOLATILE_HPP
 #define TYBL_VODKA_TYPETRAITS_REMOVEVOLATILE_HPP
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <class T>
 struct remove_volatile {
@@ -18,6 +18,6 @@ struct remove_volatile<volatile T> {
 template <class T>
 using remove_volatile_t = typename remove_volatile<T>::type;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_REMOVEVOLATILE_HPP

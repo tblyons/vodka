@@ -3,7 +3,7 @@
 #ifndef TYBL_VODKA_TYPETRAITS_INTEGRALCONSTANT_HPP
 #define TYBL_VODKA_TYPETRAITS_INTEGRALCONSTANT_HPP
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <class T, T V>
 struct integral_constant {
@@ -23,6 +23,6 @@ struct integral_constant {
 
 };
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_INTEGRALCONSTANT_HPP

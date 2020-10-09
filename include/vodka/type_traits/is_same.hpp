@@ -6,7 +6,7 @@
 #include "false_type.hpp"
 #include "true_type.hpp"
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <class T, class U>
 struct is_same
@@ -19,6 +19,6 @@ struct is_same<T, T>
 template< class T, class U >
 inline constexpr bool is_same_v = is_same<T, U>::value;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_ISSAME_HPP

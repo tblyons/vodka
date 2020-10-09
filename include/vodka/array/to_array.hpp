@@ -9,7 +9,7 @@
 #include <type_traits> // std::is_*_constructable_v, std::is_array
 #include <utility>     // std::index_sequence, std::make_index_sequence
 
-namespace tybl::vodka::array {
+namespace tybl::vodka {
 
 // to_array
 
@@ -41,6 +41,6 @@ to_array(T(&&a)[N]) noexcept(std::is_nothrow_move_constructible_v<T>) -> array<t
   return impl_rvalue_to_array(utility::move(a), std::make_index_sequence<N>());
 }
 
-} // namespace tybl::vodka::array
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_ARRAY_TOARRAY_HPP

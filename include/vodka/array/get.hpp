@@ -5,7 +5,7 @@
 
 #include "vodka/utility/move.hpp"
 
-namespace tybl::vodka::array {
+namespace tybl::vodka {
 
 // get<>
 
@@ -37,6 +37,6 @@ get(array<T, N> const&& a) noexcept -> T const&& {
   return utility::move(a.m_elems[I]);
 }
 
-} // namespace tybl::vodka::array
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_ARRAY_GET_HPP

@@ -6,7 +6,7 @@
 #include "is_same.hpp"
 #include "remove_cv.hpp"
 
-namespace tybl::vodka::type_traits {
+namespace tybl::vodka {
 
 template <class T>
 struct is_void
@@ -15,6 +15,6 @@ struct is_void
 template <class T>
 inline constexpr bool is_void_v = is_void<T>::value;
 
-} // namespace tybl::vodka::type_traits
+} // namespace tybl::vodka
 
 #endif // TYBL_VODKA_TYPETRAITS_ISVOID_HPP

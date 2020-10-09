@@ -17,7 +17,7 @@
 #include <stdexcept>   // std::out_of_range
 #include <type_traits> // std::is_nothrow_swappable
 
-namespace tybl::vodka::array {
+namespace tybl::vodka {
 
 template <class T, size_t N>
 struct array {
@@ -139,7 +139,7 @@ constexpr auto operator>=(array<T, N> const& lhs, array<T, N> const& rhs) -> boo
 }
 #endif // !TYBL_CAN_SYNTHESIZE_COMPARISONS
 
-} // namespace tybl::vodka::array
+} // namespace tybl::vodka
 
 #undef TYBL_CAN_SYNTHESIZE_COMPARISONS
 
