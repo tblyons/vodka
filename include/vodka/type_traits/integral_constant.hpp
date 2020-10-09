@@ -17,7 +17,9 @@ struct integral_constant {
     return value;
   }
 
-  [[nodiscard]] constexpr value_type operator()() const noexcept {
+  [[nodiscard]]
+  constexpr auto
+  operator()() const noexcept -> value_type {
     return value;
   }
 
