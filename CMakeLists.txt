@@ -31,6 +31,7 @@ target_sources(vodka
     include/vodka/array/array.hpp
     include/vodka/array/get.hpp
     include/vodka/array/to_array.hpp
+    include/vodka/type_traits/integral_constant.hpp
     include/vodka/type_traits/remove_const.hpp
     include/vodka/type_traits/remove_cv.hpp
     include/vodka/type_traits/remove_volatile.hpp

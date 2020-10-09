@@ -15,3 +15,8 @@ target_sources(unit_test
     vodka/utility/forward.cpp
 )
 add_test(NAME unit_test_t COMMAND unit_test)
+
+add_executable(integral_constant)
+target_link_libraries(integral_constant PRIVATE compiler_settings vodka)
+target_sources(integral_constant PRIVATE vodka/type_traits/integral_constant.cpp)
+add_test(NAME integral_constant_t COMMAND integral_constant)
