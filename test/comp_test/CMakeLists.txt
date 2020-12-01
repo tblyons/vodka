@@ -13,7 +13,9 @@ target_link_libraries(comp_test PRIVATE compiler_settings vodka)
 target_sources(comp_test
   PRIVATE
     vodka/algorithm/max.cpp
+    vodka/array/array.cpp
     vodka/functional/less_equal.cpp
+    vodka/span/span.cpp
     vodka/string_view/basic_string_view.cpp
     vodka/type_traits/false_type.cpp
     vodka/type_traits/true_type.cpp
